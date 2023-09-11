@@ -1,0 +1,26 @@
+[
+  {
+    "userId": 1,
+    "userName": "abCD",
+    "accessToken": "mdnjcdwdsdsdsdsdsdskjduhfy",
+    "refresToken": "nsmdjdyucbhvjfm",
+    "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png",
+    "userEmail": "abCD@gmail.com"
+  },
+  {
+    "userId": 2,
+    "userName": "Anas",
+    "accessToken": "mdnjcdwdsdsdsdsdsdskjduhfy",
+    "refresToken": "nsmdjdyucbhvjfm",
+    "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png",
+    "userEmail": "Anas@gmail.com"
+  },
+  {
+    "userId": 3,
+    "userName": "pryash",
+    "accessToken": "mdnjcdwdsdsdsdsdsdskjduhfy",
+    "refresToken": "nsmdjdyucbhvjfm",
+    "photo": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png",
+    "userEmail": "preyash@gmail.com"
+  }
+]

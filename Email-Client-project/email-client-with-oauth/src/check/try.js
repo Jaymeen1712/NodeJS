@@ -1,0 +1,36 @@
+// const { Kafka, Partitioners } = require('kafkajs')
+
+// const kafka = new Kafka({
+//     clientId: 'my-app',
+//     brokers: ['localhost:9092']
+// })
+// const producer = kafka.producer({ createPartitioner: Partitioners.LegacyPartitioner })
+// const admin = kafka.admin()
+// async function run() {
+//     await producer.connect()
+//     await admin.connect()
+
+//     const topic = 'Topic'
+//     await admin.createTopics({
+//         topics: [{
+//             topic,
+//             numPartitions: 3
+//         }]
+//     })
+//     await producer.send({
+//         topic,
+//         messages: [
+//             { value: 'Message 1' },
+//             { value: 'Message 2' },
+//             { value: 'Message 3' },
+//             { value: 'Message 4' },
+//             { value: 'Message 5' }
+//         ]
+//     })
+// }
+// run().catch(console.error)
+
+let base64= "RGVhciBJbnZlc3RvciwNCg0KwqANCg0KQXMgYW4gb24tZ29pbmcgbWVhc3VyZSB0byBlbmhhbmNlIHRoZSBlYXNlIG9mIGRvaW5nIGJ1c2luZXNzIGZvciBpbnZlc3RvcnMgaW4gdGhlIHNlY3VyaXRpZXMgbWFya2V0LCBTRUJJLCBoYXMgZnJvbSB0aW1lIHRvIHRpbWUgcHJlc2NyaWJlZCBjb21tb24gYW5kIHNpbXBsaWZpZWQgbm9ybXMgZm9yIHByb2Nlc3NpbmcgaW52ZXN0b3LigJlzIHNlcnZpY2UgcmVxdWVzdCBieSBSZWdpc3RyYXJzIHRvIGFuIElzc3VlIGFuZCBTaGFyZSBUcmFuc2ZlciBBZ2VudHMgKFJUQXMpIGFuZCBub3JtcyBmb3IgZnVybmlzaGluZyBQQU4sIEtZQyBkZXRhaWxzIGFuZCBOb21pbmF0aW9uLsKgDQoNCsKgDQoNClNFQkkgaGFkIHJlY2VpdmVkIHJlcHJlc2VudGF0aW9ucyBmcm9tIHZhcmlvdXMgaW52ZXN0b3JzIHJlZ2FyZGluZyBkaWZmaWN1bHRpZXMgZmFjZWQgYnkgdGhlbSBwZXJ0YWluaW5nIHRvIHByb2NlZHVyYWwgYXNwZWN0cyBvZiBwcm92aXNpb25zIGFuZCBpbnRlcnByZXRhdGlvbnMgb2YgZG9jdW1lbnRhdGlvbnMgcmVxdWlyZWQgZm9yIHByb2Nlc3NpbmcgaW52ZXN0b3Igc2VydmljZSByZXF1ZXN0cy7CoA0KDQrCoA0KDQpIZW5jZSwgdmlkZSBpdHMgY2lyY3VsYXIgLSBTRUJJL0hPL01JUlNEL01JUlNELVBvRC0xL1AvQ0lSLzIwMjMvMzcgZGF0ZWQgTWFyY2ggMTYsIDIwMjMgKGZvcndhcmRlZCBieSBOU0UgdmlkZSBpdHMgY2lyY3VsYXIgTlNFL0NNTC8yMDIzLzIzIGRhdGVkIE1hcmNoIDIyLCAyMDIzKSwgU0VCSSBoYXMgcHJvdmlkZWQgbm9ybXMgLyBwcm9jZWR1cmFsIHJlcXVpcmVtZW50cyBmb3IgcHJvY2Vzc2luZyBzdWNoIHNlcnZpY2UgcmVxdWVzdHMgb2YgaW52ZXN0b3JzIGJ5IFJUQXMuIFRoZXNlIGluY2x1ZGUgcmVxdWlyZW1lbnRzIHBlcnRhaW5pbmcgdG86DQoNCsKgDQoNCjEuIE1hbmRhdG9yeSBmdXJuaXNoaW5nIG9mIFBBTiwgS1lDIGRldGFpbHMgYW5kIE5vbWluYXRpb24gYnkgaG9sZGVycyBvZiBwaHlzaWNhbCBzZWN1cml0aWVzLg0KDQoyLiBGcmVlemluZyBvZiBGb2xpb3Mgd2l0aG91dCBQQU4sIEtZQyBkZXRhaWxzIGFuZCBOb21pbmF0aW9uLg0KDQozLiBBdHRlc3RhdGlvbiBvZiBkb2N1bWVudHMuDQo0LiBNb2RlIGZvciDCoCBwcm92aWRpbmcgwqAgZG9jdW1lbnRzL2RldGFpbHMgwqBieSDCoCBpbnZlc3RvcnMgZm9yIMKgIHZhcmlvdXMgwqAgc2VydmljZSByZXF1ZXN0cy4NCg0KNS4gU3RhbmRhcmRpemVkLCBzaW1wbGlmaWVkIGFuZCBjb21tb24gbm9ybXMgZm9yIHByb2Nlc3NpbmcgaW52ZXN0b3Igc2VydmljZSByZXF1ZXN0cy4NCg0KNi4gRm9ybXMgZm9yIGF2YWlsaW5nIHZhcmlvdXMgSW52ZXN0b3Igc2VydmljZXMuDQo3LiBJbmRlbW5pdHkuDQo4LiBLWUMgZGV0YWlscyBhY3Jvc3MgYWxsIGZvbGlvcyBvZiB0aGUgaG9sZGVyLCBtYWludGFpbmVkIGJ5IHRoZSBSVEEuDQoNCjkuIFRpbWVsaW5lcyBmb3IgcmVnaXN0ZXJpbmcgb2YgLyB1cGRhdGlvbiBvZiAvIGNoYW5nZSBpbiBQQU4sIEtZQyBhbmQgbm9taW5hdGlvbi4NCg0KMTAuIERpc3BsYXkgb2YgY29udGFjdCBkZXRhaWxzIG9mIFJUQXMuDQoxMS4gQWxsIG9iamVjdGlvbnMgYnkgUlRBIHRvIGJlIHJhaXNlZCBpbiBvbmUgaW5zdGFuY2UuDQoxMi4gRWxlY3Ryb25pYyBpbnRlcmZhY2UgZm9yIHByb2Nlc3NpbmcgcXVlcmllcyBhbmQgY29tcGxhaW50cy4NCsKgDQoNCkZvciBkZXRhaWxlZCBpbmZvcm1hdGlvbiwgcGxlYXNlIHJlZmVyIHRvIHRoZSBhdHRhY2hlZCBTRUJJIGNpcmN1bGFyIC0gU0VCSS9ITy9NSVJTRC9NSVJTRC1Qb0QtMS9QL0NJUi8yMDIzLzM3IGRhdGVkIE1hcmNoIDE2LCAyMDIzDQoNCsKgDQoNCkZvciBOYXRpb25hbCBTdG9jayBFeGNoYW5nZSBvZiBJbmRpYSBMaW1pdGVkDQoNCldhbnQgdG8gY2hhbmdlIGhvdyB5b3UgcmVjZWl2ZSB0aGVzZSBlbWFpbHM_IFlvdSBjYW4gVU5TVUJTQ1JJQkUgKA0KaHR0cHM6Ly9uc2UuZW1haWwtbWVzc2FnaW5nLmNvbS90cmFja2luZy8xL3Vuc3Vic2NyaWJlL2Vqb1JDY3c3Y2ZLd2hpbHBiY1BndTlIU0tZWEpsSWJsZlE2MGFzRU1ENkJVOW5ybDNobXNpampybUpUMW9FQmhybFN3NDdGbTlVbmR3QXdqakRiODVRNmV5YTRHbEtBR0pidC1zLWlZWkFmWG1vYkQ5MzJ4ZUtOSEFYLW5mYjluUWtxVmtOaEkwYU1RSy1jQXJqeVh0cDdSTVBzWjAwTVMtdFpTRmkteW8yLU9FOExrZFp0MmV3V0RQMDdjNkVfUFB0WVR0UDZyczZuSHh0RmRPbjFWWktVM2Vid2pLXzZBY2NsNXhCV0pmZXFfRHluTU8wRHB3cTFxNDNZakRWRjV4dV9yQU53ZEpCWEJPRlVXaXlxd21JQkVDUnBCXzJBOWtEWXpEQkM4bWtONjB3N1NLZTRUdXVUTlFUYVBPRGRVOGt5TjNDQnUyR1NtV0VKQUJLemV0VDY1VGJqZ3VmemtxVEJmZWhHdTdjYVo4M25SZEV2SkRldUE3a0FPcVE2NThGY2dvck5ZcVVBMm1ReEUxYXEtaHpTX1Q2c0czTVhnOW9Pa19LN3gyUFJLUTN6RE5ST0RxMFdQLXNQaDJqOUQ0QVdkMTV0T1hiMC1RUWowY3pVZWZPeUhpY3ZndFVhdDRHZjhzRkhDYldlMnhQaEF5UTkwZ040cHJudDF0MnlhNmpxUjZRUEtQQ191THRtWHQ1VUJzT0xvcWRSeVZaamx4enZkZlJGREkyWlBuTlBCZGJ2emFwZV9yM1JtbHAxeXRCRXc1Xy0yckN6X19mczEwTzVxV2o5cDRobXdGYTFCM3FtLXcwcnJfUVlWdXo2VnItYW1oSDc5LVVKbUt3SWltdGF1cjlVaEtINWJ0S0ttRjF6Y1d6c29GS2RJR2JvZEdlaldJOTBvRDJoRGRfOUNhandKbmVLbDIzQzJqSVlQaFd5UjBnblJFOFVqN1IzU0l3b0FwcHUzY0ZCbzFLQ1ptazRhdkVJZUV1Rk1uYmZCR29FOHRCc1NoRDRJd29nS3NHT21fUFNWcDFCV3VDSTF0bkFNQWsyUzNLeWtFMGNSbjBSdmUwM05vNHVDRXhhN3B5N0xuV3ZBYVlfdkZJcXggKSBmcm9tIHRoaXMgbGlzdC4=" 
+
+const textstr = Buffer.from(base64, 'base64').toString('utf-8')
+console.log(textstr);
